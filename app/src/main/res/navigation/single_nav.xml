@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/single_nav"
+    app:startDestination="@id/jobFragment">
+    <fragment
+        android:id="@+id/jobFragment"
+        android:name="com.example.lokalassignment.ui.JobFragment"
+        android:label="fragment_job"
+        tools:layout="@layout/fragment_job" >
+        <action
+            android:id="@+id/action_jobFragment_to_bookmarkFragment2"
+            app:destination="@id/bookmarkFragment" />
+        <action
+            android:id="@+id/action_jobFragment_to_detailJobFragment"
+            app:destination="@id/detailJobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.lokalassignment.ui.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
+        <action
+            android:id="@+id/action_bookmarkFragment_to_detailJobFragment"
+            app:destination="@id/detailJobFragment"
+            app:popUpTo="@id/detailJobFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailJobFragment"
+        android:name="com.example.lokalassignment.ui.DetailJobFragment"
+        android:label="fragment_detail_job"
+        tools:layout="@layout/fragment_detail_job" >
+        <action
+            android:id="@+id/action_detailJobFragment_to_jobFragment"
+            app:destination="@id/jobFragment"
+            app:popUpTo="@id/jobFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

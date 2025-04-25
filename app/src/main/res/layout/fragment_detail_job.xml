@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.DetailJobFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Back"
+                android:src="@drawable/ic_back" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/shareButton"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:text="Share"
+                android:textColor="#2196F3"
+                app:icon="@drawable/ic_share"
+                app:iconTint="#2196F3"
+                app:strokeColor="#2196F3" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/jobTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Computer Hardware Engineer"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/jobSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depends on experience/position"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alpha computer"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:drawableStart="@drawable/ic_company"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/jobLocation"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="Mulund West, Mumbai"
+            android:textSize="16sp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="8dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/vacanciesChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 Vacancies"
+            android:layout_marginTop="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#E3F2FD"
+            app:cardCornerRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Job Highlights"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:textColor="@color/black"
+                    android:id="@+id/tvExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Experience: Less than 1 year"
+                    android:drawableStart="@drawable/ic_experience"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tvQual"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qualification: 12th"
+                    android:drawableStart="@drawable/ic_qualification"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tvGender"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender: Male"
+                    android:drawableStart="@drawable/ic_gender"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Preferences"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/tvShift"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shift timing: Day Shift"
+                    android:drawableStart="@drawable/ic_shift"
+                    android:drawablePadding="8dp"
+                    android:layout_marginTop="8dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvFeeText"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fee not required"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disclaimer"
+            android:textColor="@color/design_default_color_error"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:id="@+id/tvDisclamier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lokal App is not responsible for the accuracy of the job details or the claims made by the advertiser in this job post."
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/chatButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Chat"
+                android:textColor="#4CAF50"
+                app:icon="@drawable/ic_whatsapp"
+                app:iconTint="#4CAF50"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#4CAF50" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/callHrButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call HR"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#FFC107" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

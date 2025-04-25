@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvJobTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnFavorite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Telecalling Executive"/>
+
+        <ToggleButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:button="@drawable/like_selector"
+            android:textOn=""
+            android:textOff=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Bookmark"/>
+
+        <TextView
+            android:id="@+id/tvSalary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJobTitle"
+            tools:text="₹35,000 - 45,000"/>
+
+        <TextView
+            android:id="@+id/tvCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_company"
+            android:drawablePadding="4dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+            tools:text="Mavis Group of Companies"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSalary">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tvVacancies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 vacancies"
+                android:textColor="#1E88E5"
+                app:chipBackgroundColor="#E3F2FD"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tvJobType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Work from home"
+                android:textColor="#4CAF50"
+                app:chipBackgroundColor="#E8F5E9"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/tvFeeCharged"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fee charged"
+                android:textColor="#F57C00"
+                app:chipBackgroundColor="#FFF3E0"/>
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_location"
+            android:drawablePadding="4dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCompany"
+            tools:text="Bhagyanagar, Karimnagar"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocation">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Chat"
+                android:textColor="#4CAF50"
+                app:icon="@drawable/ic_whatsapp"
+                app:iconTint="#4CAF50"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="#4CAF50"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCallHR"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Call HR"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#FFC107"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
